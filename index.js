@@ -211,14 +211,13 @@ export default class OTPInputView extends Component {
                 style={style}
             >
                 <TouchableWithoutFeedback
-                    style={{ width: '100%', height: '100%' }}
                     onPress={() => {
                         let filledPinCount = digits.filter((digit) => { return (digit !== null && digit !== undefined) }).length
                         this.focusField(Math.min(filledPinCount, pinCount - 1))
                     }}
                 >
                     <View
-                        style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', width: '100%', height: '100%' }}
+                        style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}
                     >
                         {this.renderTextFields()}
                     </View>
